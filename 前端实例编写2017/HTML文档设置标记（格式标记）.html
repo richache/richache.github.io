@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>文档设置标记</title>
+		<meta charset="utf-8">
+		<style>
+			body{
+				background-color:#123456;
+				color:#528460;
+			}
+			
+			div#ol{
+				background-color:white;
+				text-shadow:1px 0;
+			}
+		</style>
+	
+	</head>
+	
+	<body>	
+		<h1><center>格式标记</center></h1>
+		<div id=ol>
+		<ol type=1>
+			<li value=1>br 强制换行标记</li>
+			<li>p 段落标记</li>
+			<li>center 居中标记</li>
+			<li>pre 预格式标记</li>
+			<li>li 列表标记</li>
+			<li>ol 有序列表标记 </li>
+			<li>ul 无序列表标记</li>
+			<li>dl dt dd 定义列表标记 </li>
+			<li>hr 水平分割线标记</li>
+			<li>div 分区显示标记/层标记</li>
+		</ol>
+		</div>
+		
+		<div id=ul>
+		<ul>注意:
+			<li>br和hr为单标记，记得自闭合</li>
+			<li>段落标记可以实现自动换行，段落之间有间距，可调</li>
+			<li>pre预格式标记可以以预定格式显示文本</li>
+			<li>li必须与ol或者ul配套使用</li>
+			<li>格式标记互相之间可以嵌套使用</li>
+			<li>div分层是重要的方法，每一个层都可以做精细样式修改而互不影响，必不可少</li>
+			<li>待续......</li>
+		</ul>
+		</div>
+		<hr/>
+		
+		<dl>
+			<dt>自定义列表dl使用dt作开头</dt>
+			<dd>使用dd作详述</dd>
+		</dl>
+	</body>
+
+</html>

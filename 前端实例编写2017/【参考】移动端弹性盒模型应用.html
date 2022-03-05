@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒模型的应用</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .menu_con{
+            width:960px;
+            margin:20px auto;
+            display: flex;
+        }
+        .logo{
+            width:80px;
+            height:60px;
+            background:gold;
+        }
+        .menu{
+            background: #c3eaff;
+            flex-grow: 1;
+            display: flex;
+            align-content: space-between;
+            /*使子元素垂直居中*/
+            align-items: center;
+            overflow: hidden;
+        }
+        .menu li{
+            text-align: center;
+            /*每个li均分剩余宽度*/
+            flex-grow: 1;
+            border-left:1px solid #ccc;
+            margin-left:-1px;
+        }
+        /*
+            或者是给父元素加overflow:hidden,同时给子元素设置margin-left为负值来实现边框合并
+            可以使用这种方法来去掉第一个li的左边距
+            .menu li:nth-child(1){
+             border-left: 0;
+            }
+        */
+        menu li a{
+            color:#666;
+        }
+        @media (max-width:960px){
+            .menu_con{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu_con">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">首页</a></li>
+            <li><a href="javascript:void(0);">新闻动态</a></li>
+            <li><a href="javascript:void(0);">时事热点</a></li>
+            <li><a href="javascript:void(0);">娱乐新闻</a></li>
+            <li><a href="javascript:void(0);">关于我们</a></li>
+        </ul>
+    </div>
+</body>
+</html>

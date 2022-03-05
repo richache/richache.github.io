@@ -1,0 +1,75 @@
+<!Doctype html>
+<html>
+<head>
+	<meta href="utf-8">
+	<title>JSON基础</title>
+	<style>
+		body{
+			background-color:#f0f0f0;
+			margin:20px 30px 20px 30px;
+			padding:50px 120px 50px 120px;
+			color:#654315;
+			line-height:150%;
+		}
+		p.eg{
+			text-align:center-left;
+			text-indent:20px;
+			color:#2844af;
+			line-height:200%;
+		}
+		p{
+			text-align:justify;
+			text-indent:40px;
+			color:#154523;
+		}
+		h4{
+			color:#000;
+			text-shadow:1px 1px #999;
+		}
+	</style>
+	
+	<script>
+		document.write("<h1>JSON基础</h1>");
+		document.write("<h5>2017年9月22日 powered by -- 銘東辰</h5><hr/>");
+	</script>
+</head>
+<body>
+	<h4>概念与特点</h4>
+	<p>JSON 英文全称 JavaScript Object Notation，是用于存储和传输数据的格式。通常用于服务端向网页传递数据 。</p>
+	<ul>
+		<li>JSON 是一种轻量级的数据交换格式。</li>
+		<li>JSON 是独立的语言 </li>
+		<li>JSON 易于理解。</li>
+	</ul><hr/>
+	
+	<h4>格式</h4>
+	<p class="eg">{"JSON数组对象名":[{"键":"值","键":"值","键":"值"......},{"键":"值","键":"值","键":"值"......},......]}</p>
+	<ul>
+		<li>中括号内为一个JSON数组</li>
+		<li>数组内每一个大括号包含的范围都是一个JSON对象（数组内全是匿名对象，所以指定时要使用数组脚标）</li>
+		<li>JSON对象内包含着一个或者多个键/值对，键/值对就是JSON的数据格式（类似于JS中的对象属性）</li>
+		<li>最外面的大括号把整个JSON数组包含了起来，这是一个完整的JSON数组对象（可转换为JS对象）</li>
+	</ul><hr/>
+	
+	<h4>转换成JS对象</h4>
+	<p>使用JS内置函数JSON.parse()可以将JSON字符串转换为一个JS对象</p>
+	<input type="button" value="点击显示指定数据" onclick="demo()">
+	<p style=color:red id=demo>显示指定数据</p>
+	<script>
+		var text='{"employees":['+'{"firstname":"Steve","lastname":"Jobs"},'+'{"firstname":"Bill","lastname":"Gates"}]}';
+		var obj=JSON.parse(text);
+		function demo(){
+			document.getElementById("demo").innerHTML=obj.employees[0].firstname+" "+obj.employees[0].lastname;
+		}
+	</script>
+	<pre style=font-size:18px>
+		源代码：
+		var text='{"employees":['+'{"firstname":"Steve","lastname":"Jobs"},'+'{"firstname":"Bill","lastname":"Gates"}]}';
+		var obj=JSON.parse(text);
+		function demo(){
+			document.getElementById("demo").innerHTML=obj.employees[0].firstname+" "+obj.employees[0].lastname;
+		}
+	</pre>
+	
+</body>
+</html>

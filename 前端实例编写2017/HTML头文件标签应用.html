@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<!- 本文档用于熟悉head标签下的各种元素--->
+<head>
+	<!--title元素，用于定义该网页（文档）窗口的标题-->
+	<title>title元素内容</title>
+	
+	<!--base元素，用于描述基本的链接地址，HTML中定义为文档中所有链接标签的默认链接地址-->
+	<base href="http://www.runoob.com/" target="_blank">
+
+	<!--link元素，定义了文档与外部资源之间的关系，常用于链接到样式表-->
+	<link rel="stylesheet" type="text/css" href="styles1.css">
+
+	<!--noscript元素，用于定义 在脚本未被执行时的替代内容（文本）（H5里面noscript元素可以放在head里面）-->
+	<noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+	
+	<!--style元素，用于定义HTML文档的样式文件引用地址.（也可直接添加样式来渲染 HTML 文档）-->
+	<style type = "text/css">
+	body {background-color:blown}
+	p {color:green}
+	</style>
+	
+	<!--meta元素，用于指定网页的描述，关键词，文件的最后修改时间，作者，和其他元数据。
+	元数据可以使用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他Web服务。-->
+	<meta charset = "utf-8">
+	<meta name = "description" content = "head标签详解">
+	<meta name = "keywords" content = "HTML,CSS,XML,JavaScript">
+	<meta name = "author" content = "銘東辰">
+	<meta http-equiv="refresh" content="30">
+	<!--上述例子中charset，name，content，httpequiv就是meta元素的属性，属性后面跟 = ，并且指定为双引号里面的值-->
+	
+</head>
+<body>
+
+	<h1>head标签下的元素详解</h1>
+	<h3>2017年7月17日22:35:30——by銘東辰</h3>
+	<p>本文介绍了HTML的头文件下的6种元素（meta，title，stytle，link，base，noscript）及其基本用法，详见HTML源文件</p>
+	
+	<!--通常在body下使用script标签以定义客户端脚本（如JavaScript）。
+	script元素既可包含脚本语句，也可以通过 "src" 属性指向外部脚本文件。
+	JavaScript 脚本语言，通常用于图像操作、表单验证以及动态内容更改。-->
+	<!--用script标签运用JS脚本输出Hellio World-->
+	<script>
+		document.write("Hello World!")
+	</script>
+	
+</body>
+</html>
